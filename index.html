@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AK Photography</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero_bg.webp"
+      media="(min-width: 1503px)"
+    />
+    <script src="js/gallery.js" defer></script>
+  </head>
+  <body class="pb-4">
+    <!-- Header/Navigation -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container py-1 fs-4">
+          <a class="navbar-brand fs-1" href="#hero">AK Photography</a>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar_nav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar_nav">
+            <ul class="navbar-nav ms-auto w-100 justify-content-around">
+              <li class="nav-item">
+                <a class="nav-link px-4 mx-1" href="#gallery">Photo Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4 mx-1" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4 mx-1" href="#meet-amr">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero background image handled with CSS -->
+    <div id="hero" class="mb-4"></div>
+    <main>
+      <!-- Gallery Section -->
+      <section id="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mb-3">
+              <!-- Filter Buttons -->
+              <div
+                id="filter-buttons"
+                class="d-flex justify-content-center gap-2 gap-md-2 flex-wrap mb-1"
+              >
+                <button
+                  class="filter-btn active px-md-4 py-2 rounded-4"
+                  data-filter="portrait"
+                >
+                  Portrait
+                </button>
+                <button
+                  class="filter-btn px-2 px-md-4 py-2 rounded-4"
+                  data-filter="automotive"
+                >
+                  Automotive
+                </button>
+                <button
+                  class="filter-btn px-2 px-md-4 py-2 rounded-4"
+                  data-filter="event"
+                >
+                  Events
+                </button>
+                <button
+                  class="filter-btn px-2 px-md-4 py-2 rounded-4"
+                  data-filter="commercial"
+                >
+                  Commercial
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive image gallery injected by JS -->
+          <div
+            class="row justify-content-center gallery-grid"
+            id="gallery-container"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services">
+        <div class="container mb-3 mb-md-4 mb-lg-5">
+          <h2 class="text-center mb-3 mb-md-4 fs-1">Services</h2>
+          <div
+            class="row g-3 g-md-4 justify-content-center align-items-stretch"
+          >
+            <!-- Portrait Photography Service -->
+            <div class="col-lg-4 col-md-10 d-flex">
+              <div class="card h-100 shadow-lg border-1 w-100">
+                <div
+                  class="card-body d-flex flex-column text-center p-3 p-md-4 p-lg-5"
+                >
+                  <div class="mb-3 mb-md-4">
+                    <i
+                      class="fas fa-camera-retro fa-4x fa-md-5x text-dark mb-3 mb-md-4"
+                    ></i>
+                    <h3 class="card-title fw-bold fs-3 fs-md-2">
+                      Portrait Sessions
+                    </h3>
+                  </div>
+                  <p class="card-text text-muted flex-grow-1 fs-5 mb-3 mb-md-4">
+                    Professional headshots, family portraits, and individual
+                    sessions with natural lighting and posing guidance. Perfect
+                    for LinkedIn profiles, dating apps, family memories, or
+                    personal branding.
+                  </p>
+                  <div class="mt-auto">
+                    <h4 class="text-dark fw-bold mb-3 mb-md-4 fs-4 fs-md-3">
+                      Starting at 800 EGP
+                    </h4>
+                    <ul class="list-unstyled small fs-5 text-muted">
+                      <li class="mb-2">• 1-2 hour session</li>
+                      <li class="mb-2">• 15-20 edited photos</li>
+                      <li class="mb-2">• High-resolution delivery</li>
+                      <li class="mb-2">• Basic retouching included</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Photography Service -->
+            <div class="col-lg-4 col-md-10 d-flex">
+              <div class="card h-100 shadow-lg border-1 w-100">
+                <div
+                  class="card-body d-flex flex-column text-center p-3 p-md-4 p-lg-5"
+                >
+                  <div class="mb-3 mb-md-4">
+                    <i
+                      class="fas fa-images fa-4x fa-md-5x text-dark mb-3 mb-md-4"
+                    ></i>
+                    <h3 class="card-title fw-bold fs-3 fs-md-2">
+                      Event Coverage
+                    </h3>
+                  </div>
+                  <p class="card-text text-muted flex-grow-1 fs-5 mb-3 mb-md-4">
+                    Weddings, corporate events, parties, and celebrations
+                    captured with attention to every special moment. From
+                    intimate gatherings to grand celebrations, I document the
+                    emotions and connections.
+                  </p>
+                  <div class="mt-auto">
+                    <h4 class="text-dark fw-bold mb-3 mb-md-4 fs-4 fs-md-3">
+                      Starting at 2,500 EGP
+                    </h4>
+                    <ul class="list-unstyled small fs-5 text-muted">
+                      <li class="mb-2">• Full event coverage</li>
+                      <li class="mb-2">• 100+ edited photos</li>
+                      <li class="mb-2">• Online gallery delivery</li>
+                      <li class="mb-2">• Same-day preview shots</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commercial Photography Service -->
+            <div class="col-lg-4 col-md-10 d-flex">
+              <div class="card h-100 shadow-lg border-1 w-100">
+                <div
+                  class="card-body d-flex flex-column text-center p-3 p-md-4 p-lg-5"
+                >
+                  <div class="mb-3 mb-md-4">
+                    <i
+                      class="fas fa-store fa-4x fa-md-5x text-dark mb-3 mb-md-4"
+                    ></i>
+                    <h3 class="card-title fw-bold fs-3 fs-md-2">Commercial</h3>
+                  </div>
+                  <p class="card-text text-muted flex-grow-1 fs-5 mb-3 mb-md-4">
+                    Product photography, branding content and business marketing
+                    materials with professional studio quality. Elevate your
+                    brand with high-impact visuals designed for social media,
+                    websites.
+                  </p>
+                  <div class="mt-auto">
+                    <h4 class="text-dark fw-bold mb-3 mb-md-4 fs-4 fs-md-3">
+                      Starting at 1,200 EGP
+                    </h4>
+                    <ul class="list-unstyled small fs-5 text-muted">
+                      <li class="mb-2">• Product/brand focused</li>
+                      <li class="mb-2">• Studio or on-location</li>
+                      <li class="mb-2">• Commercial usage rights</li>
+                      <li class="mb-2">• Fast turnaround (2-3 days)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="pb-3">
+      <div class="container">
+        <div id="contact" class="row align-items-center">
+          <div
+            class="col-md-8 offset-md-2 col-sm-12 col-lg-5 offset-lg-0 text-center"
+          >
+            <img
+              id="amr"
+              src="images/about_ak.webp"
+              alt="Amr Khalil - Professional Photographer"
+              class="img-fluid rounded-3 shadow-lg mt-4"
+              loading="lazy"
+            />
+          </div>
+
+          <div id="small_screen_fix" class="col-md-12 col-lg-7">
+            <div id="about-text" class="ps-md-4 text-center w-100">
+              <h3 id="meet-amr" class="fw-bold text-dark display-3">
+                Meet Amr
+              </h3>
+              <p id="about-amr" class="lead fs-3 px-2 text-muted">
+                I'm Amr, a Cairo-based photographer with 8+ years of turning
+                life's precious moments into lasting art. My passion is creating
+                photos that don't just capture moments—they tell stories that
+                live forever. Let's collaborate to create something truly
+                extraordinary.
+              </p>
+              <a
+                id="get_in_touch"
+                href="https://wa.me/0123456789?text=Hi%20Amr,%20I'm%20interested%20in%20photography%20services%20for..."
+                target="_blank"
+                class="btn btn-lg btn-success p-3 px-4"
+                style="font-family: serif"
+              >
+                <i class="fab fa-whatsapp me-2"></i>Contact Me
+              </a>
+              <footer>
+                <div id="socials" class="d-flex flex-column pt-2 mt-2">
+                  <p
+                    style="font-family: serif"
+                    class="text-center text-decoration-underline"
+                  >
+                    My Socials:
+                  </p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <img
+                        src="images/socials/instagram.png"
+                        alt="Instagram"
+                        class="w-100"
+                      />
+                    </a>
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <img
+                        src="images/socials/facebook.png"
+                        alt="Facebook"
+                        class="w-100 h-100 object-fit-contain"
+                      />
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <img
+                        src="images/socials/linkedin.png"
+                        alt="LinkedIn"
+                        class="w-100 h-100 object-fit-contain"
+                      />
+                    </a>
+                    <a
+                      href="https://behance.com"
+                      target="_blank"
+                      class="social-link"
+                      title="My Behance"
+                    >
+                      <img
+                        src="images/socials/behance.png"
+                        alt="Behance"
+                        class="w-100 h-100 object-fit-contain"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
