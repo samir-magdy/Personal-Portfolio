@@ -184,6 +184,39 @@ body {
   }
 }
 
+@keyframes click-hint {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes swipe-hint {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .gallery-item[data-category="portrait"]:first-child .gallery-card {
+    animation: click-hint 1.5s ease-in-out 2;
+  }
+
+  .gslide-image {
+    animation: swipe-hint 2s ease-in-out 2;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .filter-btn:hover {
     background: #ffc107;
