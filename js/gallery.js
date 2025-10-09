@@ -45,22 +45,23 @@ const gallery_data = {
   ],
 };
 
-// SimpleLightbox instance
-let lightboxGallery = null;
-
 // Create gallery item with category data attribute
 function create_gallery_item(img, category) {
   return `<div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="${category}">
-              <div class="gallery-card">
-                <a href="${img}" class="gallery-link">
-                  <img class="gallery-img" src="${img}" alt="" />
-                </a>
-              </div>
-            </div>`;
+  <div class="gallery-card">
+  <a href="${img}" class="gallery-link">
+  <img class="gallery-img" src="${img}" alt="" />
+  </a>
+  </div>
+  </div>`;
 }
 
 const filter_buttons = document.querySelectorAll(".filter-btn");
 const gallery_container = document.getElementById("gallery-container");
+
+// Lightbox instance
+let lightboxGallery = null;
+let hasShownHint = false;
 
 // Initialize GLightbox
 function initLightbox() {
@@ -72,8 +73,17 @@ function initLightbox() {
     captions: false,
     selector: ".gallery-item:not(.hidden) .gallery-link",
     touchNavigation: true,
-    loop: true,
     slideEffect: "slide",
+  });
+
+  lightboxGallery.on("open", () => {
+    if (!hasShownHint) {
+      const slideImage = document.querySelector(".gslide-image");
+      if (slideImage) {
+        slideImage.classList.add("first-open");
+        hasShownHint = true;
+      }
+    }
   });
 }
 
