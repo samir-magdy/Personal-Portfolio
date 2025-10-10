@@ -1,7 +1,3 @@
-## Photography Portfolio
-
-A clean, minimalist online portfolio designed for a freelance photographer. The goal is to deliver a beautiful, distraction-free viewing experience while providing clear pathways for potential client engagement and conversion.
-
 ## Key Features
 
 - **Gallery Focus:** Interactive photo gallery showcases around 40 high-quality images, filterable by category.
